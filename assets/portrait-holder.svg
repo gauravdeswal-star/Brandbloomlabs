@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" width="900" height="1125" role="img" aria-label="Portrait placeholder">
-  <rect width="900" height="1125" fill="#EFEFEE"/>
+  <rect width="900" height="1125" fill="#FFFBEA"/>
 
   <!-- frame -->
   <rect x="26" y="26" width="848" height="1073" fill="none" stroke="#0D0D0F" stroke-opacity=".12"/>
@@ -26,8 +26,8 @@
   <line x1="332" y1="468" x2="568" y2="468" stroke="#0D0D0F" stroke-opacity=".1" stroke-dasharray="4 8"/>
 
   <!-- accent: one tick, one dot -->
-  <line x1="450" y1="322" x2="450" y2="348" stroke="#2F5BFF" stroke-width="2"/>
-  <circle cx="450" cy="468" r="3" fill="#2F5BFF"/>
+  <line x1="450" y1="322" x2="450" y2="348" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="450" cy="468" r="3" fill="#2563EB"/>
 
   <!-- metadata -->
   <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="22" letter-spacing="3">
