@@ -248,3 +248,34 @@ if (finePointer && !reduced) {
   };
   requestAnimationFrame(tick);
 }
+
+/* ---------- theme toggle ---------- */
+
+(function () {
+  const root = document.documentElement;
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  const STORAGE_KEY = 'bbl-theme';
+
+  function apply(theme, persist) {
+    root.setAttribute('data-theme', theme);
+    btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    if (persist) {
+      try { localStorage.setItem(STORAGE_KEY, theme); } catch (e) {}
+    }
+  }
+
+  let initial = null;
+  try { initial = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+  if (initial !== 'light' && initial !== 'dark') {
+    initial = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  }
+  apply(initial, false);
+
+  btn.addEventListener('click', function () {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    apply(next, true);
+  });
+})();
