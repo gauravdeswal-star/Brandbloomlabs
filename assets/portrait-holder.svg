@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1125" width="900" height="1125" role="img" aria-label="Portrait placeholder">
+  <rect width="900" height="1125" fill="#EFEFEE"/>
+
+  <!-- frame -->
+  <rect x="26" y="26" width="848" height="1073" fill="none" stroke="#0D0D0F" stroke-opacity=".12"/>
+
+  <!-- registration marks -->
+  <g stroke="#0D0D0F" stroke-opacity=".32">
+    <line x1="26" y1="26" x2="86" y2="26"/>
+    <line x1="26" y1="26" x2="26" y2="86"/>
+    <line x1="874" y1="26" x2="814" y2="26"/>
+    <line x1="874" y1="26" x2="874" y2="86"/>
+    <line x1="26" y1="1099" x2="86" y2="1099"/>
+    <line x1="26" y1="1099" x2="26" y2="1039"/>
+    <line x1="874" y1="1099" x2="814" y2="1099"/>
+    <line x1="874" y1="1099" x2="874" y2="1039"/>
+  </g>
+
+  <!-- figure, drawn as construction geometry -->
+  <g fill="none" stroke="#0D0D0F" stroke-opacity=".26">
+    <circle cx="450" cy="468" r="118"/>
+    <path d="M262 856c0-104 84-166 188-166s188 62 188 166"/>
+    <line x1="262" y1="856" x2="638" y2="856"/>
+  </g>
+  <line x1="450" y1="468" x2="450" y2="856" stroke="#0D0D0F" stroke-opacity=".1" stroke-dasharray="4 8"/>
+  <line x1="332" y1="468" x2="568" y2="468" stroke="#0D0D0F" stroke-opacity=".1" stroke-dasharray="4 8"/>
+
+  <!-- accent: one tick, one dot -->
+  <line x1="450" y1="322" x2="450" y2="348" stroke="#2F5BFF" stroke-width="2"/>
+  <circle cx="450" cy="468" r="3" fill="#2F5BFF"/>
+
+  <!-- metadata -->
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="22" letter-spacing="3">
+    <text x="64" y="112" fill="#6E6F76">PORTRAIT — PENDING</text>
+    <text x="836" y="112" fill="#0D0D0F" text-anchor="end">GK</text>
+    <text x="64" y="1006" fill="#6E6F76">FRAME 4 : 5</text>
+    <text x="836" y="1006" fill="#6E6F76" text-anchor="end">3000 × 3750</text>
+  </g>
+
+  <!-- caption rule -->
+  <line x1="64" y1="968" x2="836" y2="968" stroke="#0D0D0F" stroke-opacity=".12"/>
+</svg>
