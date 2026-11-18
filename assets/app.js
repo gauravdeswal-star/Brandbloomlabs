@@ -210,3 +210,41 @@ form.addEventListener('submit', async (event) => {
     submitBtn.textContent = 'Send enquiry';
   }
 });
+
+/* ---------- custom cursor ---------- */
+
+const finePointer = matchMedia('(pointer: fine)').matches;
+if (finePointer && !reduced) {
+  const cursor = document.createElement('div');
+  cursor.className = 'cursor';
+  cursor.innerHTML = '<span class="cursor__dot"></span><span class="cursor__ring"></span>';
+  document.body.appendChild(cursor);
+
+  const dot = cursor.querySelector('.cursor__dot');
+  const ring = cursor.querySelector('.cursor__ring');
+
+  const interactiveSelector = 'a, button, .pill, .svc, .review, .step, .plate__list li, .spec__row, .direct li, .founder__plate, input, textarea, select, label';
+
+  let mx = 0, my = 0, rx = 0, ry = 0, visible = false;
+
+  addEventListener('mousemove', (event) => {
+    mx = event.clientX;
+    my = event.clientY;
+    if (!visible) { visible = true; cursor.classList.add('is-visible'); }
+    const el = document.elementFromPoint(mx, my);
+    const over = !!el && !!el.closest(interactiveSelector);
+    cursor.classList.toggle('is-hover', over);
+  });
+
+  addEventListener('mouseleave', () => cursor.classList.remove('is-visible'));
+  addEventListener('mouseenter', () => { if (visible) cursor.classList.add('is-visible'); });
+
+  const tick = () => {
+    rx += (mx - rx) * 0.16;
+    ry += (my - ry) * 0.16;
+    dot.style.transform = `translate3d(${mx}px, ${my}px, 0) translate(-50%, -50%)`;
+    ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
