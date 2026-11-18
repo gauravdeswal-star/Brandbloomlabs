@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=4">
+<link rel="stylesheet" href="assets/styles.css?v=5">
 </head>
 <body>
 
@@ -149,6 +149,36 @@
           </g>
         </svg>
         <figcaption class="mono fig__caption">Public Relations is not open yet — its bar is genuinely zero.</figcaption>
+      </figure>
+
+      <figure class="timeline" data-reveal aria-label="Animated video editing timeline">
+        <div class="timeline__head">
+          <span class="mono">Fig. 02 — Edit timeline</span>
+          <span class="mono">00:00:00 — 00:00:30</span>
+        </div>
+        <div class="timeline__body">
+          <div class="timeline__ruler" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="timeline__track timeline__track--v">
+            <span class="clip" style="--x:0%;--w:28%"></span>
+            <span class="clip" style="--x:32%;--w:18%"></span>
+            <span class="clip clip--accent" style="--x:54%;--w:24%"></span>
+            <span class="clip" style="--x:82%;--w:14%"></span>
+          </div>
+          <div class="timeline__track timeline__track--a">
+            <span class="clip" style="--x:0%;--w:46%"></span>
+            <span class="clip" style="--x:50%;--w:46%"></span>
+          </div>
+          <div class="timeline__track timeline__track--c">
+            <span class="clip" style="--x:8%;--w:16%"></span>
+            <span class="clip" style="--x:30%;--w:22%"></span>
+            <span class="clip" style="--x:58%;--w:20%"></span>
+            <span class="clip" style="--x:82%;--w:14%"></span>
+          </div>
+          <div class="timeline__playhead" aria-hidden="true"></div>
+        </div>
+        <figcaption class="mono timeline__caption">A single cut, animated. Tracks: video, audio, captions.</figcaption>
       </figure>
 
       <div class="index">
@@ -560,6 +590,6 @@
   </section>
 </main>
 
-<script src="assets/app.js?v=4" defer></script>
+<script src="assets/app.js?v=5" defer></script>
 </body>
 </html>
